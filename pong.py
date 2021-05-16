@@ -23,6 +23,12 @@ class raketka(GameSprite):
             self.rect.y += 5
         if keys_pressed[K_s] and self.rect.y < 494:
             self.rect.y -= 5
+    def update_r():
+        keys_pressed = key.get_pressed()
+        if keys_pressed[K_UP] and self.rect.y > 6:
+            self.rect.y += 5
+        if keys_pressed[K_DOWN] and self.rect.y < 494:
+            self.rect.y -= 5
 class ball(GameSprite):
     def __init__(self, img, x, y, width, height, speed_x, speed_y):
         super().init(img, x, y, 0, width, height)
